@@ -1,0 +1,14 @@
+k = int(input())
+l = list()
+while k != "End":
+    l.append(int(k))
+    k = input()
+print(max(l))
+print(min(l))
+sr = sum(l)/len(l)
+print(sr)
+q = 0
+for i in range (len(l)):
+    q += (l[i]-sr)**2
+w = (q / len(l))**1/2
+print(w)
