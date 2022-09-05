@@ -3,12 +3,27 @@ l = list()
 while k != "End":
     l.append(int(k))
     k = input()
-print(max(l))
-print(min(l))
-sr = sum(l)/len(l)
+def ma(l):
+    max_ = l[0]
+    for i in l:
+        if i > max_:
+           max_ = i
+    return max_
+def mi(l):
+    mi_ = l[0]
+    for i in l:
+        if i < mi_:
+           mi_ = i
+    return mi_
+print(mi(l))
+print(ma(l))
+su = 0
+for i in range (len(l)):
+    su += l[i]
+sr = su/len(l)
 print(sr)
 q = 0
-for i in range (len(l)):
+for i in range(len(l)):
     q += (l[i]-sr)**2
 w = (q / len(l))**1/2
 print(w)
