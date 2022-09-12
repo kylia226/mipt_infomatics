@@ -1,1 +1,3 @@
-kill -15 PID 19739
+[student@localhost Desktop]$ kill -15 PID 17400
+bash: kill: PID: arguments must be process or job IDs
+[1]+  Terminated              sleep 1000
