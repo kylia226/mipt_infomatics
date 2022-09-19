@@ -1,0 +1,8 @@
+
+
+with open('mipt_inf', 'w', encoding='UTF-8') as file:
+    file.write('sentence\n')
+    file.write('word')
+with open('mipt_inf', 'r', encoding='UTF-8') as file:
+    for line in file:
+        print(line.strip())
