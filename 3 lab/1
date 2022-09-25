@@ -1,8 +1,6 @@
-
-
-with open('mipt_inf', 'w', encoding='UTF-8') as file:
-    file.write('sentence\n')
-    file.write('word')
-with open('mipt_inf', 'r', encoding='UTF-8') as file:
+with open("mipt_inf0", "w", encoding="utf8") as file:
+    for i in range(5):
+        file.write("А я запишу все эти строки в влюбом случае\n")
+with open('mipt_inf0', 'r', encoding="utf8") as file:
     for line in file:
         print(line.strip())
