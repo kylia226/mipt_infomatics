@@ -1,0 +1,27 @@
+import sys
+import argparse
+
+def createParser():
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-n', type=int)
+    parser.add_argument('name', nargs='?', type=int)
+
+    return parser
+
+if __name__ == '__main__':
+    parser = createParser()
+    namespace = parser.parse_args(sys.argv[1:])
+
+    def fibonacci(n):
+        n = int(n)
+        if n in (1, 2):
+            return 1
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+    try:
+        print(fibonacci(namespace.name))
+    except TypeError:
+        print("Ошибка. Слишком мало параметров")
+    except Error:
+        print("Ошибка. Слишком много параметров")
