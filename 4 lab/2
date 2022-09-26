@@ -1,0 +1,22 @@
+
+def new_decorator(func):
+    def wrapper(l):
+        n = func(l)
+        if n < 1:
+            print("Нет(")
+        elif n > 10:
+            print("Очень много")
+        else:
+            print(n)
+
+    return wrapper
+l = [4, 23, 3, 88]
+@new_decorator
+def schet(l):
+    k = []
+    for i in range(len(l)):
+        if l[i]%2 == 0:
+            k.append(l[i])
+
+    return(len(k))
+schet(l)
