@@ -1,0 +1,31 @@
+
+def decorator_maker_with_arguements(path):
+    def esho_odin_decorator(func):
+        import time
+        file = open(path, "w")
+        def wrapper(*args, **kwargs):
+                seconds1 = time.time()
+                local_time1 = time.ctime(seconds1)
+                file.write("Время начала работы программы:" + " " + local_time1 + "\n")
+                print(*args)
+                file.write(" ".join(map(str, args)) + "\n")
+                if func(*args):
+                    file.write(str(func(*args, **kwargs)) + "\n")
+                else:
+                    file.write("-" + "\n")
+                seconds2 = time.time()
+                local_time = time.ctime(seconds2)
+                file.write("Время конца работы программы:" + " " + local_time + "\n")
+                file.write('func execution time:' + " " + str(seconds2 - seconds1) + "\n")
+                return func(*args, **kwargs)
+
+        return wrapper
+        file.close()
+    return esho_odin_decorator
+
+@decorator_maker_with_arguements("test_inf")
+def clogenie(a, b):
+
+    if a > b:
+        return(a+b)
+clogenie(9, 2)
