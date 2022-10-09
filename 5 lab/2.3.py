@@ -52,3 +52,15 @@ if __name__ == "__main__":
     print(zebra)
     dolphin = Dolphin("Dolphin", 5, "South")
     print(dolphin)
+
+    
+    
+ Name is Mona 
+ Age is 3 
+ Type is African 
+ ------------------------------------------------
+
+ Name is Dolphin 
+ Age is 5 
+ Type is South 
+ ------------------------------------------------
