@@ -1,6 +1,18 @@
+#недоделано
 class Student():
-    def __init__(self, first_name, middle_name, last_name, number):
-        self.first_name = first_name
-        self.middle_name = middle_name
-        self.last_name = last_name
+    def __init__(self, name:str,  number):
+        self.name = name
         self.number = number
+
+    def __eq__(self, other):
+        if self.number != other.number:
+            return True
+students = {
+    ("Афанасий Афанасьевич", 111),
+    ("Иван Иванович", 111),
+    ("Анастасия Медведева", 213)
+}
+for name, number in students:
+    for i in range(len(students)-1):
+        
+    print(name, number)
