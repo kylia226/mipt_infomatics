@@ -27,13 +27,16 @@ class Vector():
     def __abs__(self):
         return (self.x ** 2 + self.y ** 2 + self.z ** 2) ** (0.5)
 
+    @staticmethod
+    def isMax(self, last):
+        return int(self) > int(last)
 
 n = int(input())
 l = 0
 max_len = 0
 for i in range(n):
     p = Vector.hello(input())
-    if abs(p) > max_len:
+    if Vector.isMax(abs(p), max_len):
         max_len = abs(p)
         l = p
 print(l)
